@@ -1,0 +1,4 @@
+<h2>About You</h2>
+
+<%= render 'form' %>
+

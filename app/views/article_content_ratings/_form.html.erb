@@ -1,0 +1,31 @@
+<%= simple_form_for([@participant,@article_rating,@article_content_rating]) do |f| %>
+
+  <%= f.error_notification %>
+
+	
+	<p><img src="../../../../../images/<%=@article.content_path%>"> </P>
+	
+
+	<hr>
+	<h4>Please answer some questions about the article</h4>
+	<p>Please provide three keywords to help categorize the above article:</p>
+<%= f.input :tag_01, :label=>false%>
+<%= f.input :tag_02, :label=>false%>
+<%= f.input :tag_03, :label=>false%>
+
+		<br>
+		
+		<p>To what degree do you agree with the following statements:</p>
+	
+<%= f.input :rating_01, :label=>"<b>I found the article to be worth reading.</b>", :collection => [['1 - Strongly disagree',1],["2 - Disagree",2],["3 - Neither disagree nor agree",3],["4 - Agree",4],["5 - Strongly agree",5]], :as => :radio%>	
+
+		<br>
+	
+<%= f.input :rating_02, :label=>"<b>I would retweet the article.</b>", :collection => [['1 - Strongly disagree',1],["2 - Disagree",2],["3 - Neither disagree nor agree",3],["4 - Agree",4],["5 - Strongly agree",5]], :as => :radio%>		
+	
+
+  <div class="actions">
+		<%= f.hidden_field :article_id %>
+    <br><%= f.submit "Continue" , :class => 'btn btn-primary'  %>
+  </div>
+<% end %>

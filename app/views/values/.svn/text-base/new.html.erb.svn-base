@@ -1,0 +1,3 @@
+<h2>What Do You Value?</h2>
+
+<%= render 'form' %>

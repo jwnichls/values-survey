@@ -1,0 +1,22 @@
+<%= simple_form_for([@participant,@article_rating]) do |f| %>
+
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+	<br>
+	<p>Imagine you just received the following tweet in your feed:</p>
+	<p><p><img src="../../../../../images/<%=@article.tweet_path%>"> </P></p>	
+	
+	<%= f.hidden_field :article_id %>
+	<b>
+		<br>
+	<%= f.input :rating_01, :label=>"<b>After reading the tweet, how likely to click to read this article?</b>", :collection => [['1 - Extremely unlikely',1],["2 - Unlikely",2],["3 - Neutral",3],["4 - Likely",4],["5 - Extremely likely",5]], :as => :radio%>		
+	
+	<br>
+
+  </div>
+
+  <div class="actions">
+    <br><%= f.submit "To Article" , :class => 'btn btn-primary'  %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+<h2>Checking Participation Qualification</h2>
+
+<p>Click on the following button to verify that you met our participation requirement. It will redirect you to Twitter to ask you to authorize our application to use your account.</p>
+
+<p>In order to participate in this study, you must meet the following requirements:</p> 
+<ol>
+	<li>Have a Twitter account</li>
+	<li>You have to have joined Twitter more than 4 weeks ago</li>
+	<li>You have to have submitted more than 10 Tweets</li>
+</ol><br>
+
+<%= render 'form' %>
+

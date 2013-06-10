@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/worker_info/!svn/ver/2/trunk/config/locales
+END
+en.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/worker_info/!svn/ver/2/trunk/config/locales/en.yml
+END
+simple_form.en.yml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/worker_info/!svn/ver/15/trunk/config/locales/simple_form.en.yml
+END
+en.bootstrap.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/worker_info/!svn/ver/2/trunk/config/locales/en.bootstrap.yml
+END

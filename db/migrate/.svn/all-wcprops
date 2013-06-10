@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/worker_info/!svn/ver/2/trunk/db/migrate
+END
+20130324164801_create_article_ratings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/worker_info/!svn/ver/17/trunk/db/migrate/20130324164801_create_article_ratings.rb
+END
+20130324164826_create_demographics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/worker_info/!svn/ver/15/trunk/db/migrate/20130324164826_create_demographics.rb
+END
+20130320191753_create_tweets.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/worker_info/!svn/ver/2/trunk/db/migrate/20130320191753_create_tweets.rb
+END
+20130314225144_create_participants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/worker_info/!svn/ver/17/trunk/db/migrate/20130314225144_create_participants.rb
+END
+20130404164011_create_articles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/worker_info/!svn/ver/17/trunk/db/migrate/20130404164011_create_articles.rb
+END
+20130316041408_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/worker_info/!svn/ver/2/trunk/db/migrate/20130316041408_create_users.rb
+END
+20130316031454_create_twitter_checks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/worker_info/!svn/ver/2/trunk/db/migrate/20130316031454_create_twitter_checks.rb
+END
+20130316030955_create_personalities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/worker_info/!svn/ver/2/trunk/db/migrate/20130316030955_create_personalities.rb
+END
+20130321174459_create_values.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/worker_info/!svn/ver/2/trunk/db/migrate/20130321174459_create_values.rb
+END
+20130407142815_create_article_content_ratings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/worker_info/!svn/ver/17/trunk/db/migrate/20130407142815_create_article_content_ratings.rb
+END

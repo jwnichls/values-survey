@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'Edit', edit_twitter_check_path(@twitter_check) %> |
+<%= link_to 'Back', twitter_checks_path %>

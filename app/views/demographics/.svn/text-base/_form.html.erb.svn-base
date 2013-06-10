@@ -1,0 +1,91 @@
+<%= simple_form_for([@participant,@demographic]) do |f| %>
+
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+	
+	<p>How often do you do the following?</p>
+	
+	
+	<div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>&nbsp;</th>
+					<th style="text-align:center;width:10%">1 - never</th>
+					<th style="text-align:center;width:10%">2 - very rarely</th>
+					<th style="text-align:center;width:10%">3 - rarely</th>
+					<th style="text-align:center;width:10%">4 - occasionally</th>
+					<th style="text-align:center;width:10%">5 - frequently</th>
+					<th style="text-align:center;width:10%">6 - very frequently</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:left">How often do you read articles from <b>LifeHacker</b>?<%= f.error :site_01 %></td>
+					<td style="text-align:center"><%= f.radio_button( :site_01, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :site_01, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :site_01, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :site_01, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :site_01, "5") %></td>
+					<td style="text-align:center"><%= f.radio_button( :site_01, "6") %></td>
+				</tr>
+				
+			</tbody>
+		</table>
+	  </div>
+	
+	<br>
+	<p>To what extent do you agree with the following statements?</p>
+	
+	<div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>&nbsp;</th>
+					<th style="text-align:center">1 - strongly disagree</th>
+					<th style="text-align:center">2 - disagree</th>
+					<th style="text-align:center">3 - neither disagree nor agree</th>
+					<th style="text-align:center">4 - agree</th>
+					<th style="text-align:center">5 - strongly agree</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:left">I am interested in reading articles about <b>Work/Career</b>?<%= f.error :topic_01 %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_01, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_01, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_01, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_01, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_01, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left">I am interested in reading articles about <b>Leisure</b>?<%= f.error :topic_02 %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_02, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_02, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_02, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_02, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_02, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left">I am interested in reading articles about <b>Environment</b>?<%= f.error :topic_03 %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_03, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_03, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_03, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_03, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :topic_03, "5") %></td>
+				</tr>
+			</tbody>
+		</table>
+	  </div>
+	
+	<br>
+
+	<p><%=f.input :age, :label=>"What is your age?"%></p>
+	<p><%=f.input :state, :label=>"What is your State of residence?"%></p>
+  </div>
+
+  <div class="actions">
+    <br><%= f.submit "Submit HIT" , :class => 'btn btn-primary'  %>
+  </div>
+<% end %>

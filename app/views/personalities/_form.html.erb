@@ -1,0 +1,127 @@
+<%= simple_form_for([@participant,@personality]) do |f| %>
+
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+	<div>
+		<b>How well do the following statements describe your personality?</b><br><br>
+		I see myself as someone who...
+	</div>
+	
+	<div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>&nbsp;</th>
+					<th style="text-align:center;width:12%">1 - strongly disagree</th>
+					<th style="text-align:center;width:12%">2 - disagree</th>
+					<th style="text-align:center;width:12%">3 - neither disagree nor agree</th>
+					<th style="text-align:center;width:12%">4 - agree</th>
+					<th style="text-align:center;width:12%">5 - strongly agree</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:left"><b>is reserved</b><%= f.error :big5_01 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_01, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_01, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_01, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_01, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_01, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>is generally trusting</b><%= f.error :big5_02 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_02, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_02, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_02, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_02, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_02, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>tends to be lazy</b><%= f.error :big5_03 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_03, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_03, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_03, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_03, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_03, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>is relaxed, handles stress well</b><%= f.error :big5_04 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_04, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_04, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_04, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_04, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_04, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>has few artistic interests</b><%= f.error :big5_05 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_05, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_05, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_05, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_05, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_05, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>is outgoing, sociable</b><%= f.error :big5_06 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_06, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_06, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_06, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_06, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_06, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>tends to find fault with others</b><%= f.error :big5_07 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_07, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_07, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_07, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_07, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_07, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>does a thorough job</b><%= f.error :big5_08 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_08, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_08, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_08, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_08, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_08, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>gets nervous easily</b><%= f.error :big5_09 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_09, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_09, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_09, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_09, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_09, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>has an active imagination</b><%= f.error :big5_10 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_10, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_10, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_10, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_10, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_10, "5") %></td>
+				</tr>
+				<tr>
+					<td style="text-align:left"><b>is relaxed, handles stress well</b><%= f.error :big5_11 %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_11, "1") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_11, "2") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_11, "3") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_11, "4") %></td>
+					<td style="text-align:center"><%= f.radio_button( :big5_11, "5") %></td>
+				</tr>
+			</tbody>
+		</table>
+	  </div>
+	<br>
+  </div>
+
+	<div>
+	<%= f.input :gender, :label=>"<b>Which of the following best describes how you think of yourself?</b>", :collection => [['Male',1],["Female",2]], :as => :radio%>
+	</div>
+
+
+  <div class="actions">
+    <br><%= f.submit "Continue" , :class => 'btn btn-primary'  %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<h1>Listing article_content_ratings</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @article_content_ratings.each do |article_content_rating| %>
+  <tr>
+    <td><%= link_to 'Show', article_content_rating %></td>
+    <td><%= link_to 'Edit', edit_article_content_rating_path(article_content_rating) %></td>
+    <td><%= link_to 'Destroy', article_content_rating, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Article content rating', new_article_content_rating_path %>

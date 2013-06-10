@@ -1,0 +1,25 @@
+<h2>Consent Form</h2>
+
+
+		<p>You have been invited to participate in this research study to help us understand Twitter users' interests. </p><br>
+		
+		<p>In order to participate in this study, you must meet the following requirements:<br> 
+		<ol>
+			<li>Have a Twitter account</li>
+			<li>Joined Twitter more than 4 weeks ago</li>
+			<li>Submitted more than 10 Tweets</li>
+		</ol></p><br>
+
+		<p>If you agree to participate, you will be asked to complete an online survey. Your participation would <b>take about 30 minutes</b>. You are free to withdraw your consent and to discontinue participation at any time. You must be <b>18 or older to participate</b>. In exchange for your participation, you will <b>receive $2.00</b>. This research study will not involve any cost for you.</p><br> 
+
+		<p>Your privacy will be protected to the maximum extent allowable by law. Your answers are completely confidential and your name will not be linked to the data in any way. This survey is completely voluntary; you can stop at any time or not answer any questions that you are uncomfortable with.</p><br>
+
+		<p>This research is being conducted through the Department of Communications at Michigan State University. If you have any questions or comments regarding this study, you can contact Professor Gary Hsieh, 517-355-9734 or garyh@msu.edu</p><br>
+
+		<p>If you have any questions or concerns about your role and rights as a research participant, or would like to register a complaint about this study, you may contact, anonymously if you wish, the MSU’s Human Research Protection Program, at 517-355-2180, Fax 517-432-4503, or e-mail irb@msu.edu or regular mail at 207 Olds Hall, MSU, East Lansing, MI 48824.</p><br>
+
+		<p>By clicking “continue” you are agreeing to the above terms.</p><br>
+
+
+<%= render 'form' %>
+

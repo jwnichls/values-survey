@@ -1,0 +1,8 @@
+<%= simple_form_for :twitter_check, :url => participant_twitter_checks_path do |f| %>
+  <%= f.error_notification %>
+
+  <div class="actions">
+	  <%= link_to "Check Qualification", "/auth/twitter?participant_id="+@participant.id.to_s, :class => 'btn btn-primary'  %>
+  </div>
+
+<% end %>

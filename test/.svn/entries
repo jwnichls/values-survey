@@ -1,0 +1,77 @@
+10
+
+dir
+3
+https://garyhsieh@prosocial.cas.msu.edu/svn/worker_info/trunk/test
+https://garyhsieh@prosocial.cas.msu.edu/svn/worker_info
+
+
+
+2013-03-21T21:17:15.709465Z
+2
+garyhsieh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b13b8428-d826-471b-95ef-55babc3e8b30
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2013-03-14T21:24:56.000000Z
+2b8130eb4e1a65bce16e6e0fbe90d447
+2013-03-21T21:17:15.709465Z
+2
+garyhsieh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+454
+
+performance
+dir
+
+functional
+dir
+
+integration
+dir
+
+fixtures
+dir
+

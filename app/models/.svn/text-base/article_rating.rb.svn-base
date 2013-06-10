@@ -1,0 +1,4 @@
+class ArticleRating < ActiveRecord::Base
+  belongs_to :participant
+  has_one :article_content_rating
+end

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/worker_info/!svn/ver/10/trunk/app/views/demographics
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/worker_info/!svn/ver/10/trunk/app/views/demographics/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/worker_info/!svn/ver/10/trunk/app/views/demographics/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/worker_info/!svn/ver/10/trunk/app/views/demographics/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/worker_info/!svn/ver/10/trunk/app/views/demographics/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/worker_info/!svn/ver/20/trunk/app/views/demographics/_form.html.erb
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/worker_info/!svn/ver/2/trunk/test/fixtures
+END
+values.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/worker_info/!svn/ver/2/trunk/test/fixtures/values.yml
+END
+participants.yml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/worker_info/!svn/ver/2/trunk/test/fixtures/participants.yml
+END
+personalities.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/worker_info/!svn/ver/2/trunk/test/fixtures/personalities.yml
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/worker_info/!svn/ver/2/trunk/test/fixtures/users.yml
+END
+twitter_checks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/worker_info/!svn/ver/2/trunk/test/fixtures/twitter_checks.yml
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/worker_info/!svn/ver/2/trunk/test/fixtures/.gitkeep
+END
+tweets.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/worker_info/!svn/ver/2/trunk/test/fixtures/tweets.yml
+END

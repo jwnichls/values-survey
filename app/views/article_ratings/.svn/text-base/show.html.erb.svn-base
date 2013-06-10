@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'Edit', edit_article_rating_path(@article_rating) %> |
+<%= link_to 'Back', article_ratings_path %>

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/worker_info/!svn/ver/2/trunk/app/models
+END
+participant.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/worker_info/!svn/ver/15/trunk/app/models/participant.rb
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/worker_info/!svn/ver/9/trunk/app/models/user.rb
+END
+twitter_check.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/worker_info/!svn/ver/2/trunk/app/models/twitter_check.rb
+END
+article_content_rating.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/worker_info/!svn/ver/20/trunk/app/models/article_content_rating.rb
+END
+demographic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/worker_info/!svn/ver/15/trunk/app/models/demographic.rb
+END
+article.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/worker_info/!svn/ver/16/trunk/app/models/article.rb
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/worker_info/!svn/ver/2/trunk/app/models/.gitkeep
+END
+article_rating.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/worker_info/!svn/ver/15/trunk/app/models/article_rating.rb
+END
+personality.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/worker_info/!svn/ver/15/trunk/app/models/personality.rb
+END
+tweets.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/worker_info/!svn/ver/2/trunk/app/models/tweets.rb
+END
+value.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/worker_info/!svn/ver/20/trunk/app/models/value.rb
+END
