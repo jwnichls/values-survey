@@ -1,0 +1,3 @@
+Run the following from within the mysql client:
+
+load data local infile 'articles.csv' into table articles fields terminated by ',' lines terminated by '\r' (id,title,url,page_view_count,source,type_id,within_type_id,tweet_path,content_path);
