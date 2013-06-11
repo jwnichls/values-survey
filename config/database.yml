@@ -33,10 +33,8 @@ test:
 
 production:
   adapter: mysql2
-  encoding: utf8
-  reconnect: false
   database: worker_info_production
   pool: 5
-  username: 
-  password: 
-  socket: /var/mysql/mysql.sock
+  timeout: 5000
+  username: valuessurvey
+  password: garyhsieh
