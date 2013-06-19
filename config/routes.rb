@@ -1,5 +1,7 @@
 WorkerInfo::Application.routes.draw do
 
+  root :to => 'participants#new'
+
   resources :participants do
     resources :values
     resources :users
