@@ -34,6 +34,9 @@ class ArticleContentRatingsController < ApplicationController
     @article_content_rating = ArticleContentRating.new(params[:article_content_rating])
     @article_content_rating.participant_id = @participant.id
 
+    @article_rating = ArticleRating.find(params[:article_rating_id])
+    @article = Article.find(@article_rating.article_id)
+
     @article_content_ratings_old = ArticleContentRating.find(:all, :conditions => [ "participant_id = ?", @participant.id], :group => 'article_id')
 
     if @article_content_ratings_old != nil and @article_content_ratings_old.size >= 2
