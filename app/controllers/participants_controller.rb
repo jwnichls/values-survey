@@ -18,6 +18,10 @@ class ParticipantsController < ApplicationController
   def new
     @participant = Participant.new
 
+    @participant.assignment_id = params[:assignmentId]
+    @participant.hit_id = params[:hitId]
+    @participant.worker_id = params[:workerId]
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @participant }
