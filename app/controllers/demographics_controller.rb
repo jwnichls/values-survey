@@ -7,10 +7,17 @@ class DemographicsController < ApplicationController
   def index
     @demographics = Demographic.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @demographics }
-    end
+#
+#    respond_to do |format|
+#      format.html # index.html.erb
+#      format.json { render :json => @demographics }
+#    end
+
+    ##uncomment for live
+    #redirect_to('https://www.mturk.com/mturk/externalSubmit?completed=2&assignmentId=' + @participant.assignment_id)
+    
+    ##uncomment for sandbox
+    redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?completed=2&assignmentId=' + @participant.assignment_id)
   end
 
 
