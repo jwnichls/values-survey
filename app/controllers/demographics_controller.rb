@@ -18,14 +18,19 @@ class DemographicsController < ApplicationController
   # GET /demographics/new.json
   def new
     @demographic = Demographic.new
-    
-    if (demographic_old=Demographic.find(:last, :conditions => [ "participant_id = ?", @participant.id])) != nil
-      @demographic = demographic_old.dup
-    end
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @demographic }
+
+    if (demographic_old=Demographic.find(:last, :conditions => [ "participant_id = ?", @participant.id])) != nil
+#      @demographic = demographic_old.dup
+       redirect_to participant_demographics_path(@participant.id)
+    
+    else
+
+
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render :json => @demographic }
+      end
     end
   end
 
@@ -34,6 +39,7 @@ class DemographicsController < ApplicationController
   # POST /demographics.json
   def create
     @demographic = Demographic.new(params[:demographic])
+    @demographic.participant_id = @participant.id
 
     respond_to do |format|
       if @demographic.save

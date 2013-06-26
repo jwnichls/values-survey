@@ -7,10 +7,18 @@ class ArticleRatingsController < ApplicationController
   def index
     @article_ratings = ArticleRating.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @article_ratings }
+    @articleRatings_old = ArticleRating.find(:all, :conditions => [ "participant_id = ?", @participant.id], :group => 'article_id')
+    
+    if @articleRatings_old != nil and @articleRatings_old.size >= 3
+      redirect_to new_participant_demographic_path(@participant)
+
+    else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render :json => @article_ratings }
+      end
     end
+
   end
 
   # GET /article_ratings/new

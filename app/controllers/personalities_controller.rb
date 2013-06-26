@@ -19,12 +19,16 @@ class PersonalitiesController < ApplicationController
     @personality = Personality.new
     
     if (personality_old=Personality.find(:last, :conditions => [ "participant_id = ?", @participant.id])) != nil
-      @personality = personality_old.dup
-    end
+#      @personality = personality_old.dup
+       redirect_to new_participant_value_path(@participant) 
+
+    else 
     
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @personality }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render :json => @personality }
+      end
+
     end
   end
 

@@ -9,18 +9,24 @@ class ValuesController < ApplicationController
     @value = Value.new
     
     if (value_old=Value.find(:last, :conditions => [ "participant_id = ?", @participant.id])) != nil
-      @value = value_old.dup
+#      @value = value_old.dup
+       redirect_to participant_article_ratings_path(@participant)
+
+    else
+
+      @personality = Personality.find(:last, :conditions => [ "participant_id = ?", @participant.id])
+      if @personality != nil
+        respond_to do |format|
+          format.html # new.html.erb
+          format.json { render :json => @value }
+        end
+      else
+        redirect_to new_participant_personality_path(@participant.id)
+      end
+
     end
     
-    @personality = Personality.find(:last, :conditions => [ "participant_id = ?", @participant.id])
-    if @personality != nil
-      respond_to do |format|
-        format.html # new.html.erb
-        format.json { render :json => @value }
-      end
-    else
-      redirect_to new_participant_personality_path(@participant.id)
-    end
+
   end
 
   # POST /values
