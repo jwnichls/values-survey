@@ -17,7 +17,7 @@ class DemographicsController < ApplicationController
     #redirect_to('https://www.mturk.com/mturk/externalSubmit?completed=2&assignmentId=' + @participant.assignment_id)
     
     ##uncomment for sandbox
-    redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?completed=2&assignmentId=' + @participant.assignment_id)
+    #redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?completed=2&assignmentId=' + @participant.assignment_id)
   end
 
 
@@ -50,7 +50,7 @@ class DemographicsController < ApplicationController
 
     respond_to do |format|
       if @demographic.save
-        format.html { redirect_to participant_demographics_path(@participant.id), :notice => 'HIT Submitted' }
+        format.html { redirect_to participant_demographics_path(@participant.id) }
         format.json { render :json => @demographic, :status => :created, :location => @demographic }
       else
         format.html { render :action => "new" }

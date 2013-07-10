@@ -5,4 +5,7 @@ class Participant < ActiveRecord::Base
   has_many :article_ratings
 #  has_many :article_content_ratings
   has_one :values
+
+  validates_presence_of :condition
+
 end

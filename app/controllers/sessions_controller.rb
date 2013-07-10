@@ -15,6 +15,8 @@ class SessionsController < ApplicationController
     end
     
     @userinfo = user.getUserInfo()
+    @participant = Participant.find(params[:participant_id])
+    
     # t = DateTime.parse(@userinfo.created_at)
      if @tweets.count > 10 and (DateTime.now - @userinfo.created_at.to_datetime).to_i > 28
        
@@ -30,16 +32,16 @@ class SessionsController < ApplicationController
 
           if (demographic_old=Demographic.find(:last, :conditions => [ "participant_id = ?", user.participant_id])) != nil
             #@demographic = demographic_old.dup
-            redirect_to participant_personalities_path(user.participant_id), :alert => "Your Twitter account has already been used for this experiment! If this is an error, please contact garyhsieh@gmail.com"
+            redirect_to new_twitter_check_path(:worker_id=>@participant.worker_id,:hit_id=>@participant.hit_id,:assignment_id=>@participant.assignment_id), :alert => "Your Twitter account has already been used for this experiment! If this is an error, please contact garyhsieh@gmail.com"
         
           else        
         
-            redirect_to new_participant_personality_path(user.participant_id), :notice => "Your Twitter account meets the study requirement!"
+            redirect_to new_twitter_check_path(:worker_id=>@participant.worker_id,:hit_id=>@participant.hit_id,:assignment_id=>@participant.assignment_id), :notice => "Your Twitter account meets the study requirement!"
           end
         end
      else
 
-       redirect_to participant_personalities_path(user.participant_id), :alert => 'Your Twitter account does not meet the study requirement!' 
+       redirect_to new_twitter_check_path(:worker_id=>@participant.worker_id,:hit_id=>@participant.hit_id,:assignment_id=>@participant.assignment_id), :alert => 'Your Twitter account does not meet the study requirement!' 
      end  
   end
   

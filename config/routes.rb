@@ -2,10 +2,11 @@ WorkerInfo::Application.routes.draw do
 
   root :to => 'participants#new'
 
+  resources :twitter_checks
+
   resources :participants do
     resources :values
     resources :users
-    resources :twitter_checks
     resources :personalities    
     resources :demographics
     resources :article_ratings
