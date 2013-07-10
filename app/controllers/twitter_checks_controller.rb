@@ -33,6 +33,7 @@ class TwitterChecksController < ApplicationController
     @participant.assignment_id = params[:assignmentId]
     @participant.hit_id = params[:hitId]
     @participant.worker_id = params[:workerId]
+    @participant.condition = 0
 
 
     @participant_old = Participant.find(:first, :conditions => [ "worker_id = ?", @participant.worker_id])

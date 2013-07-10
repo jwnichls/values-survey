@@ -37,29 +37,33 @@ class ParticipantsController < ApplicationController
 
     
     @participant_old = Participant.find(:first, :conditions => [ "worker_id = ?", @participant.worker_id])
-    if @participant.worker_id != "" && @participant_old != nil
+    if @participant_old != nil
       @participant_old.condition = @participant.condition
-      @participant = @participant_old
+      @participant = @participant_old.dup
 
+    end
 
-      respond_to do |format|
-        if @participant.save
+    respond_to do |format|
+      if @participant.save
 
-          ##uncomment for live
-          #redirect_to('https://www.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id)
-          
-          ##uncomment for sandbox
-          #redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id)
+        ##uncomment for live
+        #redirect_to('https://www.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id)
+        
+        ##uncomment for sandbox
+        #redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id)
 
-          format.html { redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id) }
-          format.json { render :json => @participant, :status => :created, :location => @participant }
-        else
-          format.html { render :action => "new" }
-          format.json { render :json => @participant.errors, :status => :unprocessable_entity }
-        end
+        format.html { redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id) }
+        #format.json { render :json => @participant, :status => :created, :location => @participant }
+      else
+        format.html { render :action => "new" }
+        format.json { render :json => @participant.errors, :status => :unprocessable_entity }
       end
+    end
 
-    else
+
+#    else
+
+
 #      article_type_id_array=(1..3).to_a
 #      article_type_id_array = article_type_id_array.sort_by { rand }
 
@@ -67,7 +71,7 @@ class ParticipantsController < ApplicationController
 
 #      @participant.article_type_id_array = article_type_id_array.join(",")
 #      @participant.article_within_type_id_array = article_within_type_id_array.join(",")
-    end
+#    end
     
 
 
