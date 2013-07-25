@@ -52,7 +52,7 @@ class ParticipantsController < ApplicationController
         ##uncomment for sandbox
         #redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id)
 
-        format.html { redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id) }
+        format.html { redirect_to('https://www.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id) }
         #format.json { render :json => @participant, :status => :created, :location => @participant }
       else
         format.html { render :action => "new" }
