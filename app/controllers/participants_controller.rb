@@ -41,11 +41,10 @@ class ParticipantsController < ApplicationController
 
     
     @participant_old = Participant.find(:first, :conditions => [ "worker_id = ?", @participant.worker_id])
-    if @participant_old != nil
-      @participant_old.condition = @participant.condition
-      @participant = @participant_old.dup
-
-    end
+#    if @participant_old != nil
+#      @participant_old.condition = @participant.condition
+#      @participant = @participant_old.dup
+#    end
 
     if @participant.save
 
