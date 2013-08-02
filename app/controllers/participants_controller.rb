@@ -1,5 +1,5 @@
 class ParticipantsController < ApplicationController
-  protect_from_forgery :except => [:new, :create, :index]
+  protect_from_forgery :except => [:new, :create, :index, :show]
 
   # GET /participants
   # GET /participants.json
@@ -12,15 +12,19 @@ class ParticipantsController < ApplicationController
     end
   end
 
+  def show
+    @participants = Participant.find(params[:id])
+  end
+
 
   # GET /participants/new
   # GET /participants/new.json
   def new
     @participant = Participant.new
 
-    @participant.assignment_id = params[:assignmentId]
-    @participant.hit_id = params[:hitId]
-    @participant.worker_id = params[:workerId]
+    @participant.assignment_id = params[:assignmentId].to_s
+    @participant.hit_id = params[:hitId].to_s
+    @participant.worker_id = params[:workerId].to_s
 
     respond_to do |format|
       format.html # new.html.erb
@@ -51,8 +55,11 @@ class ParticipantsController < ApplicationController
       ##uncomment for sandbox
       #redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&id='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id)
 
-      redirect_to('https://workersandbox.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&participantId='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id) 
+      redirect_to('https://www.mturk.com/mturk/externalSubmit?condition='+@participant.condition.to_s+'&participantId='+@participant.id.to_s+'&assignmentId=' + @participant.assignment_id.to_s) 
       #format.json { render :json => @participant, :status => :created, :location => @participant }
+
+      #redirect_to(participant_path(@participant.id)) 
+
     else
       render :action => "new" 
     end
