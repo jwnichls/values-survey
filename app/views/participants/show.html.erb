@@ -1,3 +1,16 @@
 <h1>Thank you</h1>
+<br>
+<h3>We are submitting your HIT right now...</h3>
 
-We are submitting your HIT right now...
+
+<script type="text/javascript">
+window.location = "https://www.mturk.com/mturk/externalSubmit?condition="+<%=@participant.condition.to_s%>+"&participantId="+<%=@participant.id.to_s%>+"&assignmentId="+<%=@participant.assignment_id.to_s%>
+</script>
+
+
+
+<br><br><br><br><br><br>
+    <p>If your results are not submitted after a few seconds, please click on the following button to submit. <br>
+	<%=button_to "Submit", "https://www.mturk.com/mturk/externalSubmit?condition="+@participant.condition.to_s+"&participantId="+@participant.id.to_s+"&assignmentId="+@participant.assignment_id.to_s, :class => "btn btn-primary"%>
+    </p>
+
