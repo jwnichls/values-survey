@@ -22,9 +22,13 @@ class ParticipantsController < ApplicationController
   def new
     @participant = Participant.new
 
+
     @participant.assignment_id = params[:assignmentId]
     @participant.hit_id = params[:hitId]
     @participant.worker_id = params[:workerId]
+
+    @participant_old = Participant.find(:first, :conditions => [ "worker_id = ?", @participant.worker_id])
+
 
     respond_to do |format|
       format.html # new.html.erb

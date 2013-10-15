@@ -3,6 +3,10 @@ class SessionsController < ApplicationController
     auth = request.env["omniauth.auth"]
     temp_id = params[:participant_id]
     user = User.find_by_uid(auth["uid"]) || User.create_with_omniauth(auth, temp_id.to_i)
+
+    user.token = auth["credentials"]["token"]
+    user.secret = auth["credentials"]["secret"]
+    user.save!
 #    user.participant_id = params[:participant_id]
     session[:user_id] = user.id
     

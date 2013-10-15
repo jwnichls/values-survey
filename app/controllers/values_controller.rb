@@ -7,11 +7,15 @@ class ValuesController < ApplicationController
   # GET /values/new.json
   def new
     @value = Value.new
+
+    @values_array=(0..20).to_a
+    @values_array = @values_array.sort_by { rand }    
+    @values_array.push(21)
     
     if (value_old=Value.find(:last, :conditions => [ "participant_id = ?", @participant.id])) != nil
 #      @value = value_old.dup
-       redirect_to participant_article_ratings_path(@participant)
-
+       #redirect_to participant_article_ratings_path(@participant)
+        redirect_to participant_values_path(@participant.id)
     else
 
       @personality = Personality.find(:last, :conditions => [ "participant_id = ?", @participant.id])
@@ -36,10 +40,14 @@ class ValuesController < ApplicationController
     @value.participant_id = @participant.id
     @personality = Personality.find(:last, :conditions => [ "participant_id = ?", @participant.id])
     
+
+    @values_array=(0..20).to_a
+    @values_array = @values_array.sort_by { rand }    
+    @values_array.push(21)    
     
     respond_to do |format|
       if @value.save
-        format.html { redirect_to participant_article_ratings_path(@participant)}
+        format.html { redirect_to participant_values_path(@participant.id) }
         format.json { render :json => @value, :status => :created, :location => @value }
       else
         format.html { render :action => "new" }

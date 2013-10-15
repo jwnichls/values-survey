@@ -6,547 +6,105 @@
 	<div>
 		
 		<% if @personality.gender == 1%>
-		
-		<div>
-			<b>Here we briefly describe some people. Please read each description and think about how much each person is or is not like you.</b><br><br>
-			0 - Not like me at all<br>
-			1 - Not like me<br>
-			2 - A little like me<br>
-			3 - Somewhat like me<br>
-			4 - Like me<br>
-			5 - Very much like me
-		</div>
-		
-		  <div>
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>&nbsp;</th>
-						<th style="text-align:center">0</th>
-						<th style="text-align:center">1</th>
-						<th style="text-align:center">2</th>
-						<th style="text-align:center">3</th>
-						<th style="text-align:center">4</th>
-						<th style="text-align:center">5</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td style="text-align:left">1. Thinking up new ideas and being creative is important to him. He likes to do things in his own original way.<%= f.error :val_01 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">2. It is important to him to be rich. He wants to have a lot of money and expensive things.<%= f.error :val_02 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">3. He thinks it is important that every person in the world be treated equally. He wants justice for everybody, even for people he doesn’t know.<%= f.error :val_03 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">4. It is very important to him to show his abilities. He wants people to admire what he does.<%= f.error :val_04 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">5. It is important to him to live in secure surroundings. He avoids anything that might endanger his safety.<%= f.error :val_05 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">6. He likes surprises and is always looking for new things to do. He thinks it is important to do lots of different things in life.<%= f.error :val_06 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">7. He believes that people should do what they're told. He thinks people should follow rules at all times, even when no-one is watching.<%= f.error :val_07 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">8. It is important to him to listen to people who are different from him. Even when he disagrees with them, he still wants to understand them.<%= f.error :val_08 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">9. He thinks it's important not to ask for more than what you have. He believes that people should be satisfied with what they have.<%= f.error :val_09 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">10. Having a good time is important to him. He likes to “spoil” himself.<%= f.error :val_10 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">11. It is important to him to make his own decisions about what he does. He likes to be free to plan and to choose his activities for himself.<%= f.error :val_11 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "5") %></td>
-					</tr>
-				</tbody>
-
-			</table>
-		  </div>
 
 
-		<div>
-			<b>Here we briefly describe some people. Please read each description and think about how much each person is or is not like you.</b><br><br>
-			0 - Not like me at all<br>
-			1 - Not like me<br>
-			2 - A little like me<br>
-			3 - Somewhat like me<br>
-			4 - Like me<br>
-			5 - Very much like me<br>
-		</div>
-					
-					
-			<div>
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>&nbsp;</th>
-						<th style="text-align:center">0</th>
-						<th style="text-align:center">1</th>
-						<th style="text-align:center">2</th>
-						<th style="text-align:center">3</th>
-						<th style="text-align:center">4</th>
-						<th style="text-align:center">5</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td style="text-align:left">12. It's very important to him to help the people around him. He wants to care for other people.<%= f.error :val_12 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">13. Being very successful is important to him. He likes to impress other people.<%= f.error :val_13 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">14. It is very important to him that his country be safe from threats from within and without. He is concerned that social order be protected.<%= f.error :val_14 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">15. He looks for adventures and likes to take risks. He wants to have an exciting life.<%= f.error :val_15 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "5") %></td>
-					</tr>
+			<% @values_array.each_with_index do |val,i| %>
 
-					<tr>
-						<td style="text-align:left">16. It is important to him always to behave properly. He wants to avoid doing anything people would say is wrong.<%= f.error :val_16 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "5") %></td>
-					</tr>
+				<% if i%11 == 0%>
+				<div>
+					<b>Here we briefly describe some people. Please read each description and think about how much each person is or is not like you.</b><br><br>
+					0 - Not like me at all<br>
+					1 - Not like me<br>
+					2 - A little like me<br>
+					3 - Somewhat like me<br>
+					4 - Like me<br>
+					5 - Very much like me<br>
+				</div>
 
-					<tr>
-						<td style="text-align:left">17. It is important to him to be in charge and tell others what to do. He wants people to do what he says.<%= f.error :val_17 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "5") %></td>
-					</tr>
+				<div>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th style="text-align:center">0</th>
+								<th style="text-align:center">1</th>
+								<th style="text-align:center">2</th>
+								<th style="text-align:center">3</th>
+								<th style="text-align:center">4</th>
+								<th style="text-align:center">5</th>
+							</tr>
+						</thead>
+						<tbody>
+				<% end %>
+							<tr>
+								<td style="text-align:left"><%=i+1%>.&nbsp;<%= Value::VALUES_Q_M[val][1]%><%= f.error("val_"+Value::VALUES_Q_M[val][0]) %></td>
+								<% 6.times do |count| %>
+								<td style="text-align:center"><%= f.radio_button( "val_"+Value::VALUES_Q_M[val][0], count) %></td>
+								<% end %>
+							</tr>
+					<% if (i+1)%11 == 0%>
+						</tbody>
 
-					<tr>
-						<td style="text-align:left">18. It is important to him to be loyal to his friends. He wants to devote himself to people close to him.<%= f.error :val_18 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "5") %></td>
-					</tr>
+					</table>
+			  	</div>			
+					<% end %>			
 
-					<tr>
-						<td style="text-align:left">19. He strongly believes that people should care for nature. Looking after the environment is important to him.<%= f.error :val_19 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "5") %></td>
-					</tr>
-
-					<tr>
-						<td style="text-align:left">20. Religious belief is important to him. He tries hard to do what his religion requires.<%= f.error :val_20 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "5") %></td>
-					</tr>
-
-					<tr>
-						<td style="text-align:left">21. He seeks every chance he can to have fun. It is important to him to do things that give him pleasure.<%= f.error :val_21 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "5") %></td>
-					</tr>
-
-					<tr>
-						<td style="text-align:left">22. It is important to him to listen to people who are different from him. Even when he disagrees with them, he still wants to understand them.<%= f.error :val_22 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "5") %></td>
-					</tr>
-				</tbody>
-				
-			</table>
-		  </div>
-		<br>
+			<% end %>
 		
 		<% else %>
 		
-		<div>
-			<b>Here we briefly describe some people. Please read each description and think about how much each person is or is not like you.</b><br><br>
-			0 - Not like me at all<br>
-			1 - Not like me<br>
-			2 - A little like me<br>
-			3 - Somewhat like me<br>
-			4 - Like me<br>
-			5 - Very much like me<br>
-		</div>
 
-		  <div>
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>&nbsp;</th>
-						<th style="text-align:center">0</th>
-						<th style="text-align:center">1</th>
-						<th style="text-align:center">2</th>
-						<th style="text-align:center">3</th>
-						<th style="text-align:center">4</th>
-						<th style="text-align:center">5</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td style="text-align:left">1. Thinking up new ideas and being creative is important to her. She likes to do things in her own original way.<%= f.error :val_01 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_01, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">2. It is important to her to be rich. She wants to have a lot of money and expensive things.<%= f.error :val_02 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_02, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">3. She thinks it is important that every person in the world be treated equally. She wants justice for everybody, even for people she doesn’t know.<%= f.error :val_03 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_03, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">4. It is very important to her to show her abilities. She wants people to admire what she does.<%= f.error :val_04 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_04, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">5. It is important to her to live in secure surroundings. She avoids anything that might endanger her safety.<%= f.error :val_05 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_05, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">6. She likes surprises and is always looking for new things to do. She thinks it is important to do lots of different things in life.<%= f.error :val_06 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_06, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">7. She believes that people should do what they're told. She thinks people should follow rules at all times, even when no-one is watching.<%= f.error :val_07 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_07, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">8. It is important to her to listen to people who are different from her. Even when she disagrees with them, she still wants to understand them.<%= f.error :val_08 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_08, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">9. She thinks it's important not to ask for more than what you have. She believes that people should be satisfied with what they have.<%= f.error :val_09 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_09, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">10. Having a good time is important to her. She likes to “spoil” herself.<%= f.error :val_10 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_10, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">11. It is important to her to make her own decisions about what she does. She likes to be free to plan and to choose her activities for herself.<%= f.error :val_11 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_11, "5") %></td>
-					</tr>
-				</tbody>
+			<% @values_array.each_with_index do |val,i| %>
 
-			</table>
-		  </div>
+				<% if i%11 == 0%>
+				<div>
+					<b>Here we briefly describe some people. Please read each description and think about how much each person is or is not like you.</b><br><br>
+					0 - Not like me at all<br>
+					1 - Not like me<br>
+					2 - A little like me<br>
+					3 - Somewhat like me<br>
+					4 - Like me<br>
+					5 - Very much like me<br>
+				</div>
 
+				<div>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th style="text-align:center">0</th>
+								<th style="text-align:center">1</th>
+								<th style="text-align:center">2</th>
+								<th style="text-align:center">3</th>
+								<th style="text-align:center">4</th>
+								<th style="text-align:center">5</th>
+							</tr>
+						</thead>
+						<tbody>
+				<% end %>
 
-		<div>
-			<b>Here we briefly describe some people. Please read each description and think about how much each person is or is not like you.</b><br><br>
-			0 - Not like me at all<br>
-			1 - Not like me<br>
-			2 - A little like me<br>
-			3 - Somewhat like me<br>
-			4 - Like me<br>
-			5 - Very much like me<br>
-		</div>
-					
-					
-			<div>
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>&nbsp;</th>
-						<th style="text-align:center">0</th>
-						<th style="text-align:center">1</th>
-						<th style="text-align:center">2</th>
-						<th style="text-align:center">3</th>
-						<th style="text-align:center">4</th>
-						<th style="text-align:center">5</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td style="text-align:left">12. It's very important to her to help the people around her. She wants to care for other people.<%= f.error :val_12 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_12, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">13. Being very successful is important to her. She likes to impress other people.<%= f.error :val_13 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_13, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">14. It is very important to her that his country be safe from threats from within and without. She is concerned that social order be protected.<%= f.error :val_14 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_14, "5") %></td>
-					</tr>
-					<tr>
-						<td style="text-align:left">15. She looks for adventures and likes to take risks. She wants to have an exciting life.<%= f.error :val_15 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_15, "5") %></td>
-					</tr>
+							<tr>
+								<td style="text-align:left"><%=i+1%>.&nbsp;<%= Value::VALUES_Q_F[val][1]%><%= f.error("val_"+Value::VALUES_Q_F[val][0]) %></td>
+								<% 6.times do |count| %>
+								<td style="text-align:center"><%= f.radio_button( "val_"+Value::VALUES_Q_F[val][0], count) %></td>
 
-					<tr>
-						<td style="text-align:left">16. It is important to her always to behave properly. She wants to avoid doing anything people would say is wrong.<%= f.error :val_16 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_16, "5") %></td>
-					</tr>
+								<% end %>
+							</tr>
+					<% if (i+1)%11 == 0%>
+						</tbody>
 
-					<tr>
-						<td style="text-align:left">17. It is important to her to be in charge and tell others what to do. She wants people to do what she says.<%= f.error :val_17 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_17, "5") %></td>
-					</tr>
+					</table>
+			  	</div>			
+					<% end %>			
 
-					<tr>
-						<td style="text-align:left">18. It is important to her to be loyal to her friends. She wants to devote herself to people close to her.<%= f.error :val_18 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_18, "5") %></td>
-					</tr>
-
-					<tr>
-						<td style="text-align:left">19. She strongly believes that people should care for nature. Looking after the environment is important to her.<%= f.error :val_19 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_19, "5") %></td>
-					</tr>
-
-					<tr>
-						<td style="text-align:left">20. Religious belief is important to her. She tries hard to do what her religion requires.<%= f.error :val_20 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_20, "5") %></td>
-					</tr>
-
-					<tr>
-						<td style="text-align:left">21. She seeks every chance she can to have fun. It is important to her to do things that give her pleasure.<%= f.error :val_21 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_21, "5") %></td>
-					</tr>
-
-					<tr>
-						<td style="text-align:left">22. It is important to her to listen to people who are different from her. Even when she disagrees with them, she still wants to understand them.<%= f.error :val_22 %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "0") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "1") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "2") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "3") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "4") %></td>
-						<td style="text-align:center"><%= f.radio_button( :val_22, "5") %></td>
-					</tr>
-				</tbody>
-				
-			</table>
-		  </div>
-		<br>
 			<% end %>
-	  </div>
-  </div>
+
+		<% end %>
+  	</div>
 
   <div class="actions">
     <br><%= f.submit "Continue" , :class => 'btn btn-primary'  %>
   </div>
 
-
+  </div>
 <% end %>
