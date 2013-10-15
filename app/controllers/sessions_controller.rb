@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
     @participant = Participant.find(params[:participant_id])
     
     # t = DateTime.parse(@userinfo.created_at)
-     if @tweets.count > 100 and (DateTime.now - @userinfo.created_at.to_datetime).to_i > 28
+     if @tweets.count > 10 and (DateTime.now - @userinfo.created_at.to_datetime).to_i > 28
        
         ## check if id has already used before
         if temp_id == user.participant_id

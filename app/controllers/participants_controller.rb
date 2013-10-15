@@ -26,6 +26,7 @@ class ParticipantsController < ApplicationController
     @participant.assignment_id = params[:assignmentId]
     @participant.hit_id = params[:hitId]
     @participant.worker_id = params[:workerId]
+    @participant.article_type_id_array = request.remote_ip
 
     @participant_old = Participant.find(:first, :conditions => [ "worker_id = ?", @participant.worker_id])
 
