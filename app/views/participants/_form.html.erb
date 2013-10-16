@@ -1,1 +1,35 @@
-HI
+<%= simple_form_for(@participant) do |f| %>
+  <%= f.error_notification %>
+
+
+  <%= f.hidden_field :worker_id %>
+  <%= f.hidden_field :hit_id %>
+  <%= f.hidden_field :assignment_id %>
+  <%= f.hidden_field :article_type_id_array %>
+
+	<% if @participant.worker_id != nil and @participant.worker_id != ""  %>
+
+
+		<p>To complete the HIT, please:</p>
+
+		<p>1. Begin and complete the survey. </p>
+
+		<%= link_to 'Click Here To Complete Survey', new_twitter_check_path(:worker_id=>@participant.worker_id,:hit_id=>@participant.hit_id,:assignment_id=>@participant.assignment_id), :target => '_blank', :style=>"font-size:20px;" %>
+
+		<br><br><br>
+
+		<p>2. Enter in the secret code you receive from completing the survey below, and then submit the HIT. Your work will be rejected if the code does not match with the one you get from completing the HIT</p>
+
+		<p><%=f.input :condition, :label=>"Enter your code below"%></p>
+
+		<%= f.submit "Commit HIT" , :class => 'btn btn-primary'  %>
+
+		<br>
+
+
+
+	<% else %>
+		*You must accept HIT to continue.<br>
+	<% end %>
+
+<% end %>
