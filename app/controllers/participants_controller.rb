@@ -28,7 +28,7 @@ class ParticipantsController < ApplicationController
     @participant.worker_id = params[:workerId]
     @participant.article_type_id_array = request.remote_ip
 
-    @participant_old = Participant.find(:first, :conditions => [ "worker_id = ?", @participant.worker_id])
+    @participant_old = Participant.find(:first, :conditions => [ "worker_id = ? where id < 750", @participant.worker_id])
 
 
     respond_to do |format|
@@ -45,7 +45,7 @@ class ParticipantsController < ApplicationController
     
 
     
-    @participant_old = Participant.find(:first, :conditions => [ "worker_id = ?", @participant.worker_id])
+    @participant_old = Participant.find(:first, :conditions => [ "worker_id = ? where id < 750", @participant.worker_id])
 #    if @participant_old != nil
 #      @participant_old.condition = @participant.condition
 #      @participant = @participant_old.dup
