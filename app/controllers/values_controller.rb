@@ -13,9 +13,9 @@ class ValuesController < ApplicationController
     @values_array.push(21)
     
     if (value_old=Value.find(:last, :conditions => [ "participant_id = ?", @participant.id])) != nil
-#      @value = value_old.dup
-       #redirect_to participant_article_ratings_path(@participant)
-      redirect_to new_participant_demographic_path(@participant)
+      #@value = value_old.dup
+      redirect_to participant_article_ratings_path(@participant)
+      #redirect_to new_participant_demographic_path(@participant)
     else
 
       @personality = Personality.find(:last, :conditions => [ "participant_id = ?", @participant.id])
@@ -47,7 +47,7 @@ class ValuesController < ApplicationController
     
     respond_to do |format|
       if @value.save
-        format.html {       redirect_to new_participant_demographic_path(@participant) }
+        format.html { redirect_to new_participant_article_rating_path(@participant) }
         format.json { render :json => @value, :status => :created, :location => @value }
       else
         format.html { render :action => "new" }

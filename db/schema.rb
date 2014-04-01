@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130407142815) do
+ActiveRecord::Schema.define(:version => 20140331050613) do
 
   create_table "article_content_ratings", :force => true do |t|
     t.integer  "participant_id"
@@ -61,6 +62,12 @@ ActiveRecord::Schema.define(:version => 20130407142815) do
     t.integer  "site_01"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.integer  "topic_05"
+    t.integer  "topic_06"
+    t.integer  "topic_07"
+    t.integer  "topic_08"
+    t.integer  "topic_09"
+    t.integer  "topic_10"
   end
 
   create_table "participants", :force => true do |t|

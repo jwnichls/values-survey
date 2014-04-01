@@ -9,7 +9,7 @@ class ArticleRatingsController < ApplicationController
 
     @articleRatings_old = ArticleRating.find(:all, :conditions => [ "participant_id = ?", @participant.id], :group => 'article_id')
     
-    if @articleRatings_old != nil and @articleRatings_old.size >= 3
+    if @articleRatings_old != nil and @articleRatings_old.size >= 2
       redirect_to new_participant_demographic_path(@participant)
 
     else
@@ -44,7 +44,7 @@ class ArticleRatingsController < ApplicationController
       @articleContentRatings_old = ArticleContentRating.find(:all, :conditions => [ "participant_id = ?", @participant.id], :group => 'article_id')
       
         
-      if @articleRatings_old != nil and @articleRatings_old.size >= 3
+      if @articleRatings_old != nil and @articleRatings_old.size >= 2
         redirect_to new_participant_demographic_path(@participant)
       
       elsif @position == @articleContentRatings_old.size

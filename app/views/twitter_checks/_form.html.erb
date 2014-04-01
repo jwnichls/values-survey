@@ -1,8 +1,10 @@
 <%= simple_form_for(@twitter_check) do |f| %>
   <%= f.error_notification %>
 
+  <%= f.hidden_field "participant_id", :value => @participant.id %>
+
   <div class="actions">
-	  <%= link_to "Check Qualification", "/auth/twitter?participant_id="+@participant.id.to_s, :class => 'btn btn-primary'  %>
+    <br><%= f.submit "Continue" , :class => 'btn btn-primary'  %>
   </div>
 
 <% end %>
