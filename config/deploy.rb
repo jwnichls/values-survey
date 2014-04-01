@@ -3,6 +3,7 @@ set :deploy_to, "/home/valuessurvey/rails"
 set :use_sudo, false
 
 set :repository,  "git@github.com:jwnichls/values-survey.git"
+set :branch, "study_only"
 
 set :user, "valuessurvey"               # define the user account
 set :domain, "qcrowd.com"               # define our domain
