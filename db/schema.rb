@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140331050613) do
+ActiveRecord::Schema.define(:version => 20140414153319) do
 
   create_table "article_content_ratings", :force => true do |t|
     t.integer  "participant_id"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20140331050613) do
     t.integer  "topic_08"
     t.integer  "topic_09"
     t.integer  "topic_10"
+    t.string   "username"
   end
 
   create_table "participants", :force => true do |t|
