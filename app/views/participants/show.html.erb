@@ -4,13 +4,7 @@
 
 
 <script type="text/javascript">
-window.location = "https://www.mturk.com/mturk/externalSubmit?condition="+<%=@participant.condition.to_s%>+"&participantId="+<%=@participant.id.to_s%>+"&assignmentId="+<%=@participant.assignment_id.to_s%>
+	window.location = 'https://www.mturk.com/mturk/externalSubmit?assignmentId=<%=@participant.assignment_id.to_s%>&cond=1'
 </script>
 
-
-
-<br><br><br><br><br><br>
-    <p>If your results are not submitted after a few seconds, please click on the following button to submit. <br>
-	<%=button_to "Commit HIT", "https://www.mturk.com/mturk/externalSubmit?condition="+@participant.condition.to_s+"&participantId="+@participant.id.to_s+"&assignmentId="+@participant.assignment_id.to_s, :class => "btn btn-primary"%>
-    </p>
 
