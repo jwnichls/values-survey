@@ -45,7 +45,7 @@ class ParticipantsController < ApplicationController
     
 
     
-    @participant_old = Participant.find(:first, :conditions => [ "worker_id = ? AND id < 819", @participant.worker_id])
+    @participant_old = Participant.find(:first, :conditions => [ "worker_id = ? AND id < 906", @participant.worker_id])
 #    if @participant_old != nil
 #      @participant_old.condition = @participant.condition
 #      @participant = @participant_old.dup
